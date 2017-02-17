@@ -1,0 +1,114 @@
+* {
+  font-family: sans-serif;
+}
+
+html, body, .container {
+  min-height: calc(100% - 10px);
+  background-color: #58a4b0;
+}
+
+.centerbox .box {
+  background-color: #d8dbe2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.centerbox {
+  height: 200px;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -150px;
+  padding: 20px;
+}
+
+.chatroom {
+  max-width: 800px;
+  margin: 1em auto;
+  padding: 10px;
+    background: lightgray;
+  min-height: calc(100% - 20px);
+}
+
+/* Krijg niet gedaan dat deze div een normale hoogte krijgt */
+.chat_messages {
+}
+
+.send_section {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chat_message {
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  clear: both;
+    
+}
+
+.left {
+  background-color: #58a4b0;
+  border-radius: 5px;
+  float: left;
+}
+
+.right {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  float: right;
+}
+
+
+
+.send_section input {
+  width: calc(100% - 80px);
+  height: 25px;
+}
+
+.send_section button {
+  height: 35px;
+  margin-left: 5px;
+  width: 60px;
+}
+
+.chat_menu {
+  position: relative;
+  border-bottom: 1px solid #999;
+}
+
+.chat_menu h1 {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.chat_menu_links {
+  float: right;
+  margin: 30px 10px 0 0;
+}
+
+.chat_menu_links * {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.chat_unread_messages_container {
+}
+
+.chat_unread_messages_container img {
+}
+
+.chat_unread_messages {
+  border-radius: 50%;
+  background-color: #ff0000;
+  color: #fff;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+  text-align: center;
+  margin-left: -15px;
+}

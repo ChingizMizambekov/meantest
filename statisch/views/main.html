@@ -1,0 +1,28 @@
+
+    <div class="container" ng-controller="ChatController">
+      <div class="chatroom">
+        <div class="chat_menu">
+          <h1>Chat room: {{currentUser}}</h1>
+          <span class="chat_menu_links">
+            <img src="../images/person.png" height="30">
+            <span class="chat_unread_messages_container">
+              <img src="../images/chat.png" height="30">
+              <span class="chat_unread_messages" ng-show="chatMessages.length > 0">{{newMessages}}</span>
+            </span>
+          </span>
+        </div>
+
+        <div class="chat_messages">
+
+            <div class="chat_message left"  ng-class="{ right: getTheAuthor(message.nickname) }" ng-repeat="message in chatMessages">{{ message.nickname }}: {{ message.message }}</div>
+
+        </div>
+
+        <div class="send_section">
+          <input type="text" placeholder="Your message here" ng-model="chatMessage.message"/>
+          <button ng-click="addMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+
