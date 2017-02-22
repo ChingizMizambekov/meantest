@@ -25,6 +25,12 @@ process.on('SIGINT', function() {
   process.exit(0);
 });
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.get('/api/chat', function (req, res) {
   chatMessagesTable.find().toArray(function (err, chatMessages) {
     // TODO Handle error
@@ -46,10 +52,6 @@ app.post('/api/addMessage', function (req, res) {
 });
 
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+
 
 app.listen(3000);
